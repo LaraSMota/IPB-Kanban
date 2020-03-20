@@ -127,11 +127,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\columnsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\membersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\column.cs" />
     <Compile Include="Models\context.cs" />
     <Compile Include="Models\member.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -177,6 +179,11 @@
     <Content Include="Views\members\Details.cshtml" />
     <Content Include="Views\members\Edit.cshtml" />
     <Content Include="Views\members\Index.cshtml" />
+    <Content Include="Views\columns\Create.cshtml" />
+    <Content Include="Views\columns\Delete.cshtml" />
+    <Content Include="Views\columns\Details.cshtml" />
+    <Content Include="Views\columns\Edit.cshtml" />
+    <Content Include="Views\columns\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
