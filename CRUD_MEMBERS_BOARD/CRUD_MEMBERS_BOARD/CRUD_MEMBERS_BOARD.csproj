@@ -127,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\boardsController.cs" />
     <Compile Include="Controllers\cardsController.cs" />
     <Compile Include="Controllers\columnsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -142,7 +143,12 @@
     <Compile Include="Migrations\202003220116213_cardsMig.designer.cs">
       <DependentUpon>202003220116213_cardsMig.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003220223076_boardMig.cs" />
+    <Compile Include="Migrations\202003220223076_boardMig.designer.cs">
+      <DependentUpon>202003220223076_boardMig.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\board.cs" />
     <Compile Include="Models\card.cs" />
     <Compile Include="Models\column.cs" />
     <Compile Include="Models\context.cs" />
@@ -200,6 +206,11 @@
     <Content Include="Views\cards\Details.cshtml" />
     <Content Include="Views\cards\Edit.cshtml" />
     <Content Include="Views\cards\Index.cshtml" />
+    <Content Include="Views\boards\Create.cshtml" />
+    <Content Include="Views\boards\Delete.cshtml" />
+    <Content Include="Views\boards\Details.cshtml" />
+    <Content Include="Views\boards\Edit.cshtml" />
+    <Content Include="Views\boards\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -223,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003220116213_cardsMig.resx">
       <DependentUpon>202003220116213_cardsMig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003220223076_boardMig.resx">
+      <DependentUpon>202003220223076_boardMig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
