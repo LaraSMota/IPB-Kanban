@@ -1,27 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aline\\source\\repos\\CrudProject\\CrudProject.csproj": {}
+    "C:\\Users\\Lara Mota\\Desktop\\Mestrado\\Kanban C\\IPB-Kanban\\CrudProject\\CrudProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aline\\source\\repos\\CrudProject\\CrudProject.csproj": {
+    "C:\\Users\\Lara Mota\\Desktop\\Mestrado\\Kanban C\\IPB-Kanban\\CrudProject\\CrudProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aline\\source\\repos\\CrudProject\\CrudProject.csproj",
+        "projectUniqueName": "C:\\Users\\Lara Mota\\Desktop\\Mestrado\\Kanban C\\IPB-Kanban\\CrudProject\\CrudProject.csproj",
         "projectName": "CrudProject",
-        "projectPath": "C:\\Users\\Aline\\source\\repos\\CrudProject\\CrudProject.csproj",
-        "packagesPath": "C:\\Users\\Aline\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aline\\source\\repos\\CrudProject\\obj\\",
+        "projectPath": "C:\\Users\\Lara Mota\\Desktop\\Mestrado\\Kanban C\\IPB-Kanban\\CrudProject\\CrudProject.csproj",
+        "packagesPath": "C:\\Users\\Lara Mota\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lara Mota\\Desktop\\Mestrado\\Kanban C\\IPB-Kanban\\CrudProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Aline\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Lara Mota\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

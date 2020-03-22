@@ -10,5 +10,7 @@ namespace CRUD_MEMBERS_BOARD.Models
     {
         public DbSet<member> Members { get; set; }
         public DbSet<column> Columns { get; set; }
+
+        public DbSet<card> Cards { get; set; }
     }
 }

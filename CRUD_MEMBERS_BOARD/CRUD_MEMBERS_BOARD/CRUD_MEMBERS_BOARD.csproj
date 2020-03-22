@@ -127,12 +127,23 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\cardsController.cs" />
     <Compile Include="Controllers\columnsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\membersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003220050077_InitialCreate.cs" />
+    <Compile Include="Migrations\202003220050077_InitialCreate.designer.cs">
+      <DependentUpon>202003220050077_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003220116213_cardsMig.cs" />
+    <Compile Include="Migrations\202003220116213_cardsMig.designer.cs">
+      <DependentUpon>202003220116213_cardsMig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\card.cs" />
     <Compile Include="Models\column.cs" />
     <Compile Include="Models\context.cs" />
     <Compile Include="Models\member.cs" />
@@ -184,6 +195,11 @@
     <Content Include="Views\columns\Details.cshtml" />
     <Content Include="Views\columns\Edit.cshtml" />
     <Content Include="Views\columns\Index.cshtml" />
+    <Content Include="Views\cards\Create.cshtml" />
+    <Content Include="Views\cards\Delete.cshtml" />
+    <Content Include="Views\cards\Details.cshtml" />
+    <Content Include="Views\cards\Edit.cshtml" />
+    <Content Include="Views\cards\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -200,6 +216,14 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202003220050077_InitialCreate.resx">
+      <DependentUpon>202003220050077_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003220116213_cardsMig.resx">
+      <DependentUpon>202003220116213_cardsMig.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
