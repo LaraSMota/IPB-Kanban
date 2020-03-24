@@ -8607,19 +8607,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\USER\\.nuget\\packages\\": {}
+    "C:\\Users\\leona\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\Desktop\\First\\IPB-Kanban\\IpbKanbanProject\\IpbKanbanProject\\IpbKanbanProject.csproj",
+      "projectUniqueName": "C:\\Users\\leona\\Source\\Repos\\IPB-Kanban\\IpbKanbanProject\\IpbKanbanProject\\IpbKanbanProject.csproj",
       "projectName": "IpbKanbanProject",
-      "projectPath": "C:\\Users\\USER\\Desktop\\First\\IPB-Kanban\\IpbKanbanProject\\IpbKanbanProject\\IpbKanbanProject.csproj",
-      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER\\Desktop\\First\\IPB-Kanban\\IpbKanbanProject\\IpbKanbanProject\\obj\\",
+      "projectPath": "C:\\Users\\leona\\Source\\Repos\\IPB-Kanban\\IpbKanbanProject\\IpbKanbanProject\\IpbKanbanProject.csproj",
+      "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\leona\\Source\\Repos\\IPB-Kanban\\IpbKanbanProject\\IpbKanbanProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\leona\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8688,7 +8688,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

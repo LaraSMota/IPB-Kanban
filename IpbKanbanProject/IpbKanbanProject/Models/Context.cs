@@ -15,6 +15,9 @@ namespace IpbKanbanProject.Models
         }
 
         public DbSet<Card> Cards { get; set; }
+
+        public DbSet<Board> Board { get; set; }
+
         public DbSet<Column> Columns { get; set; }
 
         public DbSet<User> Users { get; set; }

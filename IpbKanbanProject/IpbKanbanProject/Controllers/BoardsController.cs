@@ -11,48 +11,48 @@ namespace IpbKanbanProject.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ColumnsController : ControllerBase
+    public class BoardsController : ControllerBase
     {
         private readonly Context _context;
 
-        public ColumnsController(Context context)
+        public BoardsController(Context context)
         {
             _context = context;
         }
 
-        // GET: api/Columns
+        // GET: api/Boards
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Column>>> GetColumns()
+        public async Task<ActionResult<IEnumerable<Board>>> GetBoard()
         {
-            return await _context.Columns.ToListAsync();
+            return await _context.Board.ToListAsync();
         }
 
-        // GET: api/Columns/5
+        // GET: api/Boards/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Column>> GetColumn(int id)
+        public async Task<ActionResult<Board>> GetBoard(int id)
         {
-            var column = await _context.Columns.FindAsync(id);
+            var board = await _context.Board.FindAsync(id);
 
-            if (column == null)
+            if (board == null)
             {
                 return NotFound();
             }
 
-            return column;
+            return board;
         }
 
-        // PUT: api/Columns/5
+        // PUT: api/Boards/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutColumn(int id, Column column)
+        public async Task<IActionResult> PutBoard(int id, Board board)
         {
-            if (id != column.Id)
+            if (id != board.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(column).State = EntityState.Modified;
+            _context.Entry(board).State = EntityState.Modified;
 
             try
             {
@@ -60,7 +60,7 @@ namespace IpbKanbanProject.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ColumnExists(id))
+                if (!BoardExists(id))
                 {
                     return NotFound();
                 }
@@ -73,38 +73,38 @@ namespace IpbKanbanProject.Controllers
             return NoContent();
         }
 
-        // POST: api/Columns
+        // POST: api/Boards
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
-        public async Task<ActionResult<Column>> PostColumn(Column column)
+        public async Task<ActionResult<Board>> PostBoard(Board board)
         {
-            _context.Columns.Add(column);
+            _context.Board.Add(board);
             await _context.SaveChangesAsync();
 
-            //return CreatedAtAction("GetColumn", new { id = column.Id }, column);
-            return CreatedAtAction(nameof(GetColumn), new { id = column.Id }, column);
+            //return CreatedAtAction("GetBoard", new { id = board.Id }, board);
+            return CreatedAtAction(nameof(GetBoard), new { id = board.Id }, board);
         }
 
-        // DELETE: api/Columns/5
+        // DELETE: api/Boards/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Column>> DeleteColumn(int id)
+        public async Task<ActionResult<Board>> DeleteBoard(int id)
         {
-            var column = await _context.Columns.FindAsync(id);
-            if (column == null)
+            var board = await _context.Board.FindAsync(id);
+            if (board == null)
             {
                 return NotFound();
             }
 
-            _context.Columns.Remove(column);
+            _context.Board.Remove(board);
             await _context.SaveChangesAsync();
 
-            return column;
+            return board;
         }
 
-        private bool ColumnExists(int id)
+        private bool BoardExists(int id)
         {
-            return _context.Columns.Any(e => e.Id == id);
+            return _context.Board.Any(e => e.Id == id);
         }
     }
 }

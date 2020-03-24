@@ -82,7 +82,8 @@ namespace IpbKanbanProject.Controllers
             _context.Cards.Add(card);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCard", new { id = card.Id }, card);
+            //return CreatedAtAction("GetCard", new { id = card.Id }, card);
+            return CreatedAtAction(nameof(GetCard), new { id = card.Id }, card);
         }
 
         // DELETE: api/Cards/5
