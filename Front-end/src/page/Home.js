@@ -85,9 +85,8 @@ class Home extends React.Component {
                     Board
                   </a>
                   <a
-                    className="dropdown-item"
-                    data-toggle="modal"
-                    data-target="#team-add-modal"
+                   className="dropdown-item" 
+                   href="team"
                   >
                     Team
                   </a>
@@ -96,14 +95,14 @@ class Home extends React.Component {
               <div className="d-none d-lg-block">
                 <div className="dropdown">
                   <a
-                    href="#"
+                    href="a"
                     role="button"
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
                     <img
-                      alt="Image"
+                      alt=""
                       src="assets\\img\\avatar-male-4.jpg"
                       className="avatar"
                     />
@@ -134,7 +133,7 @@ class Home extends React.Component {
                 <div className="page-header mb-4">
                   <div className="media">
                     <img
-                      alt="Image"
+                      alt=""
                       src="assets\\img\\avatar-male-4.jpg"
                       className="avatar avatar-lg mt-1"
                     />
@@ -298,20 +297,20 @@ class Home extends React.Component {
                                 <i className="material-icons">more_vert</i>
                               </button>
                               <div className="dropdown-menu dropdown-menu-right">
-                                <a className="dropdown-item" href="#">
+                                <a className="dropdown-item" href="a">
                                   Manage
                                 </a>
                                 <div className="dropdown-divider" />
                                 <a
                                   className="dropdown-item text-danger"
-                                  href="#"
+                                  href="a"
                                 >
                                   Leave Team
                                 </a>
                               </div>
                             </div>
                             <div className="card-title">
-                              <a href="#">
+                              <a href="a">
                                 <h5
                                   data-filter-by="text"
                                   style={{
@@ -325,7 +324,7 @@ class Home extends React.Component {
                             </div>
                             <ul className="avatars">
                               <li>
-                                <a href="#" data-toggle="tooltip" title="Kenny">
+                                <a href="a" data-toggle="tooltip" title="Kenny">
                                   <img
                                     alt="Kenny Tran"
                                     className="avatar"
@@ -334,7 +333,7 @@ class Home extends React.Component {
                                 </a>
                               </li>
                               <li>
-                                <a href="#" data-toggle="tooltip" title="David">
+                                <a href="a" data-toggle="tooltip" title="David">
                                   <img
                                     alt="David Whittaker"
                                     className="avatar"
@@ -343,7 +342,7 @@ class Home extends React.Component {
                                 </a>
                               </li>
                               <li>
-                                <a href="#" data-toggle="tooltip" title="Sally">
+                                <a href="a" data-toggle="tooltip" title="Sally">
                                   <img
                                     alt="Sally Harper"
                                     className="avatar"
@@ -353,7 +352,7 @@ class Home extends React.Component {
                               </li>
                               <li>
                                 <a
-                                  href="#"
+                                  href="a"
                                   data-toggle="tooltip"
                                   title="Kristina"
                                 >
@@ -366,7 +365,7 @@ class Home extends React.Component {
                               </li>
                               <li>
                                 <a
-                                  href="#"
+                                  href="a"
                                   data-toggle="tooltip"
                                   title="Claire"
                                 >
@@ -379,7 +378,7 @@ class Home extends React.Component {
                               </li>
                               <li>
                                 <a
-                                  href="#"
+                                  href="a"
                                   data-toggle="tooltip"
                                   title="Marcus"
                                 >
@@ -411,20 +410,20 @@ class Home extends React.Component {
                                 <i className="material-icons">more_vert</i>
                               </button>
                               <div className="dropdown-menu dropdown-menu-right">
-                                <a className="dropdown-item" href="#">
+                                <a className="dropdown-item" href="a">
                                   Manage
                                 </a>
                                 <div className="dropdown-divider" />
                                 <a
                                   className="dropdown-item text-danger"
-                                  href="#"
+                                  href="a"
                                 >
                                   Leave Team
                                 </a>
                               </div>
                             </div>
                             <div className="card-title">
-                              <a href="#">
+                              <a href="a">
                                 <h5
                                   data-filter-by="text"
                                   style={{
@@ -438,7 +437,7 @@ class Home extends React.Component {
                             </div>
                             <ul className="avatars">
                               <li>
-                                <a href="#" data-toggle="tooltip" title="David">
+                                <a href="a" data-toggle="tooltip" title="David">
                                   <img
                                     alt="David Whittaker"
                                     className="avatar"
@@ -448,7 +447,7 @@ class Home extends React.Component {
                               </li>
                               <li>
                                 <a
-                                  href="#"
+                                  href="a"
                                   data-toggle="tooltip"
                                   title="Krishna"
                                 >
@@ -460,7 +459,7 @@ class Home extends React.Component {
                                 </a>
                               </li>
                               <li>
-                                <a href="#" data-toggle="tooltip" title="Peggy">
+                                <a href="a" data-toggle="tooltip" title="Peggy">
                                   <img
                                     alt="Peggy Brown"
                                     className="avatar"
@@ -489,20 +488,20 @@ class Home extends React.Component {
                                 <i className="material-icons">more_vert</i>
                               </button>
                               <div className="dropdown-menu dropdown-menu-right">
-                                <a className="dropdown-item" href="#">
+                                <a className="dropdown-item" href="a">
                                   Manage
                                 </a>
                                 <div className="dropdown-divider" />
                                 <a
                                   className="dropdown-item text-danger"
-                                  href="#"
+                                  href="a"
                                 >
                                   Leave Team
                                 </a>
                               </div>
                             </div>
                             <div className="card-title">
-                              <a href="#">
+                              <a href="a">
                                 <h5
                                   data-filter-by="text"
                                   style={{
@@ -517,7 +516,7 @@ class Home extends React.Component {
                             <ul className="avatars">
                               <li>
                                 <a
-                                  href="#"
+                                  href="a"
                                   data-toggle="tooltip"
                                   title="Marcus"
                                 >
@@ -530,7 +529,7 @@ class Home extends React.Component {
                               </li>
                               <li>
                                 <a
-                                  href="#"
+                                  href="a"
                                   data-toggle="tooltip"
                                   title="Claire"
                                 >
@@ -542,7 +541,7 @@ class Home extends React.Component {
                                 </a>
                               </li>
                               <li>
-                                <a href="#" data-toggle="tooltip" title="Harry">
+                                <a href="a" data-toggle="tooltip" title="Harry">
                                   <img
                                     alt="Harry Xai"
                                     className="avatar"
@@ -552,7 +551,7 @@ class Home extends React.Component {
                               </li>
                               <li>
                                 <a
-                                  href="#"
+                                  href="a"
                                   data-toggle="tooltip"
                                   title="Kristina"
                                 >
@@ -564,7 +563,7 @@ class Home extends React.Component {
                                 </a>
                               </li>
                               <li>
-                                <a href="#" data-toggle="tooltip" title="Kenny">
+                                <a href="a" data-toggle="tooltip" title="Kenny">
                                   <img
                                     alt="Kenny Tran"
                                     className="avatar"
@@ -573,7 +572,7 @@ class Home extends React.Component {
                                 </a>
                               </li>
                               <li>
-                                <a href="#" data-toggle="tooltip" title="Sally">
+                                <a href="a" data-toggle="tooltip" title="Sally">
                                   <img
                                     alt="Sally Harper"
                                     className="avatar"
@@ -582,7 +581,7 @@ class Home extends React.Component {
                                 </a>
                               </li>
                               <li>
-                                <a href="#" data-toggle="tooltip" title="David">
+                                <a href="a" data-toggle="tooltip" title="David">
                                   <img
                                     alt="David Whittaker"
                                     className="avatar"
@@ -591,7 +590,7 @@ class Home extends React.Component {
                                 </a>
                               </li>
                               <li>
-                                <a href="#" data-toggle="tooltip" title="Ravi">
+                                <a href="a" data-toggle="tooltip" title="Ravi">
                                   <img
                                     alt="Ravi Singh"
                                     className="avatar"
@@ -601,7 +600,7 @@ class Home extends React.Component {
                               </li>
                               <li>
                                 <a
-                                  href="#"
+                                  href="a"
                                   data-toggle="tooltip"
                                   title="Masimba"
                                 >
@@ -633,20 +632,20 @@ class Home extends React.Component {
                                 <i className="material-icons">more_vert</i>
                               </button>
                               <div className="dropdown-menu dropdown-menu-right">
-                                <a className="dropdown-item" href="#">
+                                <a className="dropdown-item" href="a">
                                   Manage
                                 </a>
                                 <div className="dropdown-divider" />
                                 <a
                                   className="dropdown-item text-danger"
-                                  href="#"
+                                  href="a"
                                 >
                                   Leave Team
                                 </a>
                               </div>
                             </div>
                             <div className="card-title">
-                              <a href="#">
+                              <a href="a">
                                 <h5
                                   data-filter-by="text"
                                   style={{
@@ -660,7 +659,7 @@ class Home extends React.Component {
                             </div>
                             <ul className="avatars">
                               <li>
-                                <a href="#" data-toggle="tooltip" title="David">
+                                <a href="a" data-toggle="tooltip" title="David">
                                   <img
                                     alt="David Whittaker"
                                     className="avatar"
@@ -669,7 +668,7 @@ class Home extends React.Component {
                                 </a>
                               </li>
                               <li>
-                                <a href="#" data-toggle="tooltip" title="Peggy">
+                                <a href="a" data-toggle="tooltip" title="Peggy">
                                   <img
                                     alt="Peggy Brown"
                                     className="avatar"
@@ -679,7 +678,7 @@ class Home extends React.Component {
                               </li>
                               <li>
                                 <a
-                                  href="#"
+                                  href="a"
                                   data-toggle="tooltip"
                                   title="Kristina"
                                 >
@@ -691,7 +690,7 @@ class Home extends React.Component {
                                 </a>
                               </li>
                               <li>
-                                <a href="#" data-toggle="tooltip" title="Ravi">
+                                <a href="a" data-toggle="tooltip" title="Ravi">
                                   <img
                                     alt="Ravi Singh"
                                     className="avatar"
@@ -720,20 +719,20 @@ class Home extends React.Component {
                                 <i className="material-icons">more_vert</i>
                               </button>
                               <div className="dropdown-menu dropdown-menu-right">
-                                <a className="dropdown-item" href="#">
+                                <a className="dropdown-item" href="a">
                                   Manage
                                 </a>
                                 <div className="dropdown-divider" />
                                 <a
                                   className="dropdown-item text-danger"
-                                  href="#"
+                                  href="a"
                                 >
                                   Leave Team
                                 </a>
                               </div>
                             </div>
                             <div className="card-title">
-                              <a href="#">
+                              <a href="a">
                                 <h5
                                   data-filter-by="text"
                                   style={{
@@ -747,7 +746,7 @@ class Home extends React.Component {
                             </div>
                             <ul className="avatars">
                               <li>
-                                <a href="#" data-toggle="tooltip" title="David">
+                                <a href="a" data-toggle="tooltip" title="David">
                                   <img
                                     alt="David Whittaker"
                                     className="avatar"
@@ -757,7 +756,7 @@ class Home extends React.Component {
                               </li>
                               <li>
                                 <a
-                                  href="#"
+                                  href="a"
                                   data-toggle="tooltip"
                                   title="Marcus"
                                 >
@@ -853,10 +852,10 @@ class Home extends React.Component {
                                   <i className="material-icons">more_vert</i>
                                 </button>
                                 <div className="dropdown-menu dropdown-menu-right">
-                                  <a className="dropdown-item" href="#">
+                                  <a className="dropdown-item" href="a">
                                     Edit
                                   </a>
-                                  <a className="dropdown-item" href="#">
+                                  <a className="dropdown-item" href="a">
                                     Share
                                   </a>
                                 </div>
@@ -876,7 +875,7 @@ class Home extends React.Component {
                               <ul className="avatars">
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="David"
                                   >
@@ -890,7 +889,7 @@ class Home extends React.Component {
                                 </li>
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="Masimba"
                                   >
@@ -904,7 +903,7 @@ class Home extends React.Component {
                                 </li>
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="Krishna"
                                   >
@@ -918,7 +917,7 @@ class Home extends React.Component {
                                 </li>
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="Harry"
                                   >
@@ -978,10 +977,10 @@ class Home extends React.Component {
                                   <i className="material-icons">more_vert</i>
                                 </button>
                                 <div className="dropdown-menu dropdown-menu-right">
-                                  <a className="dropdown-item" href="#">
+                                  <a className="dropdown-item" href="a">
                                     Edit
                                   </a>
-                                  <a className="dropdown-item" href="#">
+                                  <a className="dropdown-item" href="a">
                                     Share
                                   </a>
                                 </div>
@@ -1001,7 +1000,7 @@ class Home extends React.Component {
                               <ul className="avatars">
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="Ravi"
                                   >
@@ -1015,7 +1014,7 @@ class Home extends React.Component {
                                 </li>
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="Masimba"
                                   >
@@ -1029,7 +1028,7 @@ class Home extends React.Component {
                                 </li>
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="Peggy"
                                   >
@@ -1043,7 +1042,7 @@ class Home extends React.Component {
                                 </li>
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="Marcus"
                                   >
@@ -1057,7 +1056,7 @@ class Home extends React.Component {
                                 </li>
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="Kerri-Anne"
                                   >
@@ -1071,7 +1070,7 @@ class Home extends React.Component {
                                 </li>
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="Claire"
                                   >
@@ -1119,10 +1118,10 @@ class Home extends React.Component {
                                   <i className="material-icons">more_vert</i>
                                 </button>
                                 <div className="dropdown-menu dropdown-menu-right">
-                                  <a className="dropdown-item" href="#">
+                                  <a className="dropdown-item" href="a">
                                     Edit
                                   </a>
-                                  <a className="dropdown-item" href="#">
+                                  <a className="dropdown-item" href="a">
                                     Share
                                   </a>
                                 </div>
@@ -1142,7 +1141,7 @@ class Home extends React.Component {
                               <ul className="avatars">
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="Claire"
                                   >
@@ -1156,7 +1155,7 @@ class Home extends React.Component {
                                 </li>
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="Kristina"
                                   >
@@ -1266,7 +1265,7 @@ class Home extends React.Component {
                           </div>
                           <div className="card-body">
                             <div className="card-title">
-                              <a href="#">
+                              <a href="a">
                                 <h6 data-filter-by="text">
                                   Client objective meeting
                                 </h6>
@@ -1277,7 +1276,7 @@ class Home extends React.Component {
                               <ul className="avatars">
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="Kenny"
                                   >
@@ -1290,7 +1289,7 @@ class Home extends React.Component {
                                 </li>
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="David"
                                   >
@@ -1303,7 +1302,7 @@ class Home extends React.Component {
                                 </li>
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="Sally"
                                   >
@@ -1316,7 +1315,7 @@ class Home extends React.Component {
                                 </li>
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="Kristina"
                                   >
@@ -1329,7 +1328,7 @@ class Home extends React.Component {
                                 </li>
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="Claire"
                                   >
@@ -1342,7 +1341,7 @@ class Home extends React.Component {
                                 </li>
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="Marcus"
                                   >
@@ -1375,13 +1374,13 @@ class Home extends React.Component {
                                   <i className="material-icons">more_vert</i>
                                 </button>
                                 <div className="dropdown-menu dropdown-menu-right">
-                                  <a className="dropdown-item" href="#">
+                                  <a className="dropdown-item" href="a">
                                     Mark as done
                                   </a>
                                   <div className="dropdown-divider" />
                                   <a
                                     className="dropdown-item text-danger"
-                                    href="#"
+                                    href="a"
                                   >
                                     Archive
                                   </a>
@@ -1407,7 +1406,7 @@ class Home extends React.Component {
                           </div>
                           <div className="card-body">
                             <div className="card-title">
-                              <a href="#">
+                              <a href="a">
                                 <h6 data-filter-by="text">
                                   Target market trend analysis
                                 </h6>
@@ -1418,7 +1417,7 @@ class Home extends React.Component {
                               <ul className="avatars">
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="Peggy"
                                   >
@@ -1431,7 +1430,7 @@ class Home extends React.Component {
                                 </li>
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="David"
                                   >
@@ -1464,13 +1463,13 @@ class Home extends React.Component {
                                   <i className="material-icons">more_vert</i>
                                 </button>
                                 <div className="dropdown-menu dropdown-menu-right">
-                                  <a className="dropdown-item" href="#">
+                                  <a className="dropdown-item" href="a">
                                     Mark as done
                                   </a>
                                   <div className="dropdown-divider" />
                                   <a
                                     className="dropdown-item text-danger"
-                                    href="#"
+                                    href="a"
                                   >
                                     Archive
                                   </a>
@@ -1496,7 +1495,7 @@ class Home extends React.Component {
                           </div>
                           <div className="card-body">
                             <div className="card-title">
-                              <a href="#">
+                              <a href="a">
                                 <h6 data-filter-by="text">
                                   Assemble Outcomes Report for client
                                 </h6>
@@ -1507,7 +1506,7 @@ class Home extends React.Component {
                               <ul className="avatars">
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="Marcus"
                                   >
@@ -1520,7 +1519,7 @@ class Home extends React.Component {
                                 </li>
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="Claire"
                                   >
@@ -1533,7 +1532,7 @@ class Home extends React.Component {
                                 </li>
                                 <li>
                                   <a
-                                    href="#"
+                                    href="a"
                                     data-toggle="tooltip"
                                     title="David"
                                   >
@@ -1566,13 +1565,13 @@ class Home extends React.Component {
                                   <i className="material-icons">more_vert</i>
                                 </button>
                                 <div className="dropdown-menu dropdown-menu-right">
-                                  <a className="dropdown-item" href="#">
+                                  <a className="dropdown-item" href="a">
                                     Mark as done
                                   </a>
                                   <div className="dropdown-divider" />
                                   <a
                                     className="dropdown-item text-danger"
-                                    href="#"
+                                    href="a"
                                   >
                                     Archive
                                   </a>

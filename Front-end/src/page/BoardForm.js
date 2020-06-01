@@ -1,41 +1,36 @@
-import React from "react";
-import axios from "axios";
+import React, { Component } from 'react';
+import axios from 'axios';
 
-class Board extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: [],
-      value: [],
-      loading: true,
-      error: false,
-    };
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }  
-  onChange(e) {
-     this.setState({[e.target.name]: e.target.value})
- } 
+class BoardForm extends Component {
+	constructor(props) {
+		super(props)
 
- handleSubmit(e) {
-  e.preventDefault();
-  const data = {
-    cardId: "1",
-    title: this.state.title,
-    comments: this.state.comments,
-    attachments: "",
-    labels: "",
-    dueDate: "",
-    description: this.state.description,
-    checklist: "",
-    collumnId: "1",
-  };
-  axios.post('http://localhost:5000/api/Cards', { data })
-  .then(res => {
-    console.log(data);
-  })
- }
+		this.state = {
+			title: '',
+			boardId: ''
+
+		}
+	}
+
+	changeHandler = e => {
+		this.setState({ [e.target.name]: e.target.value })
+	}
+
+	submitHandler = e => {
+		e.preventDefault()
+		console.log(this.state)
+		axios
+			.post('http://localhost:52944/api/Collumns', this.state)
+			.then(response => {
+				console.log(response)
+			})
+			.catch(error => {
+				console.log(error)
+			})
+	}
 
   render() {
+	const { title, boardId } = this.state
     return (
       <div>
         <div className="layout layout-nav-top">
@@ -120,9 +115,8 @@ class Board extends React.Component {
                       Board
                     </a>
                     <a
-                      className="dropdown-item"
-                      data-toggle="modal"
-                      data-target="#team-add-modal"
+				  className="dropdown-item"
+				   href="team"
                     >
                       Team
                     </a>
@@ -131,14 +125,14 @@ class Board extends React.Component {
                 <div className="d-none d-lg-block">
                   <div className="dropdown">
                     <a
-                      href="#"
+                      href="a"
                       role="button"
                       data-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
                       <img
-                        alt="Image"
+                        alt=""
                         src="assets\\img\\avatar-male-4.jpg"
                         className="avatar"
                       />
@@ -558,7 +552,7 @@ class Board extends React.Component {
                 {}
                 <div className="modal-footer">
                   <button
-                    role="button"
+                    
                     className="btn btn-primary"
                     type="submit"
                   >
@@ -576,7 +570,6 @@ class Board extends React.Component {
               <div className="dropdown">
                 <button
                   className="btn btn-round"
-                  role="button"
                   data-toggle="dropdown"
                   aria-expanded="false"
                 >
@@ -590,16 +583,16 @@ class Board extends React.Component {
                   </i>
                 </button>
                 <div className="dropdown-menu dropdown-menu-right">
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item" href="share">
                     Share
                   </a>
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item" href="mark">
                     Mark as Complete
                   </a>
                   <div className="dropdown-divider" />
                   <a
                     className="dropdown-item text-danger"
-                    href="#"
+                    href="a"
                     style={{
                       color: "#D7E868"
                     }}
@@ -624,7 +617,7 @@ class Board extends React.Component {
                   <ul className="avatars">
                     <li>
                       <a
-                        href="#"
+                        href="a"
                         data-toggle="tooltip"
                         data-placement="top"
                         title="Claire Connors"
@@ -638,7 +631,7 @@ class Board extends React.Component {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="a"
                         data-toggle="tooltip"
                         data-placement="top"
                         title="Marcus Simmons"
@@ -652,7 +645,7 @@ class Board extends React.Component {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="a"
                         data-toggle="tooltip"
                         data-placement="top"
                         title="Peggy Brown"
@@ -666,7 +659,7 @@ class Board extends React.Component {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="a"
                         data-toggle="tooltip"
                         data-placement="top"
                         title="Harry Xai"
@@ -680,7 +673,7 @@ class Board extends React.Component {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="a"
                         data-toggle="tooltip"
                         data-placement="top"
                         title="Sally Harper"
@@ -694,7 +687,7 @@ class Board extends React.Component {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="a"
                         data-toggle="tooltip"
                         data-placement="top"
                         title="Ravi Singh"
@@ -708,7 +701,7 @@ class Board extends React.Component {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="a"
                         data-toggle="tooltip"
                         data-placement="top"
                         title="Kristina Van Der Stroem"
@@ -722,7 +715,7 @@ class Board extends React.Component {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="a"
                         data-toggle="tooltip"
                         data-placement="top"
                         title="David Whittaker"
@@ -785,10 +778,10 @@ class Board extends React.Component {
                             backgroundColor: "black"
                           }}
                         >
-                          <a className="dropdown-item" href="#">
+                          <a className="dropdown-item" href="a">
                             Edit
                           </a>
-                          <a className="dropdown-item text-danger" href="#">
+                          <a className="dropdown-item text-danger" href="a">
                             Archive List
                           </a>
                         </div>
@@ -817,17 +810,17 @@ class Board extends React.Component {
                                 backgroundColor: "black"
                               }}
                             >
-                              <a className="dropdown-item" href="#">
+                              <a className="dropdown-item" href="a">
                                 Edit
                               </a>
-                              <a className="dropdown-item text-danger" href="#">
+                              <a className="dropdown-item text-danger" href="a">
                                 Archive Card
                               </a>
                             </div>
                           </div>
                           <div className="card-title">
                             <a
-                              href="#"
+                              href="a"
                               data-toggle="modal"
                               data-target="#cards-modal"
                             >
@@ -858,17 +851,17 @@ class Board extends React.Component {
                                 backgroundColor: "black"
                               }}
                             >
-                              <a className="dropdown-item" href="#">
+                              <a className="dropdown-item" href="a">
                                 Edit
                               </a>
-                              <a className="dropdown-item text-danger" href="#">
+                              <a className="dropdown-item text-danger" href="a">
                                 Archive Card
                               </a>
                             </div>
                           </div>
                           <div className="card-title">
                             <a
-                              href="#"
+                              href="a"
                               data-toggle="modal"
                               data-target="#task-modal"
                             >
@@ -877,7 +870,7 @@ class Board extends React.Component {
                           </div>
                           <ul className="avatars">
                             <li>
-                              <a href="#" data-toggle="tooltip" title="David">
+                              <a href="a" data-toggle="tooltip" title="David">
                                 <img
                                   alt="David Whittaker"
                                   className="avatar"
@@ -931,21 +924,21 @@ class Board extends React.Component {
                             <div className="dropdown-menu dropdown-menu-right">
                               <a
                                 className="dropdown-item"
-                                href="#"
+                                href="a"
                                 data-toggle="modal"
                                 data-target="#forms-modal"
                               >
                                 {" "}
                                 Edit
                               </a>
-                              <a className="dropdown-item text-danger" href="#">
+                              <a className="dropdown-item text-danger" href="a">
                                 Archive Card
                               </a>
                             </div>
                           </div>
                           <div className="card-title">
                             <a
-                              href="#"
+                              href="a"
                               data-toggle="modal"
                               data-target="#task-modal"
                             >
@@ -973,20 +966,20 @@ class Board extends React.Component {
                             <div className="dropdown-menu dropdown-menu-right">
                               <a
                                 className="dropdown-item"
-                                href="#"
+                                href="a"
                                 data-toggle="modal"
                                 data-target="#forms-modal"
                               >
                                 Edit
                               </a>
-                              <a className="dropdown-item text-danger" href="#">
+                              <a className="dropdown-item text-danger" href="a">
                                 Archive Card
                               </a>
                             </div>
                           </div>
                           <div className="card-title">
                             <a
-                              href="#"
+                              href="a"
                               data-toggle="modal"
                               data-target="#task-modal"
                             >
@@ -1039,13 +1032,13 @@ class Board extends React.Component {
                         <div className="dropdown-menu dropdown-menu-right">
                           <a
                             className="dropdown-item"
-                            href="#"
+                            href="edit"
                             data-toggle="modal"
                             data-target="#forms-modal"
                           >
                             Edit
                           </a>
-                          <a className="dropdown-item text-danger" href="#">
+                          <a className="dropdown-item text-danger" href="archive">
                             Archive List
                           </a>
                         </div>
@@ -1083,20 +1076,20 @@ class Board extends React.Component {
                             <div className="dropdown-menu dropdown-menu-right">
                               <a
                                 className="dropdown-item"
-                                href="#"
+                                href="edit"
                                 data-toggle="modal"
                                 data-target="#forms-modal"
                               >
                                 Edit
                               </a>
-                              <a className="dropdown-item text-danger" href="#">
+                              <a className="dropdown-item text-danger" href="archive">
                                 Archive Card
                               </a>
                             </div>
                           </div>
                           <div className="card-title">
                             <a
-                              href="#"
+                              href="a"
                               data-toggle="modal"
                               data-target="#task-modal"
                             >
@@ -1105,7 +1098,7 @@ class Board extends React.Component {
                           </div>
                           <ul className="avatars">
                             <li>
-                              <a href="#" data-toggle="tooltip" title="David">
+                              <a href="a" data-toggle="tooltip" title="David">
                                 <img
                                   alt="David Whittaker"
                                   className="avatar"
@@ -1114,7 +1107,7 @@ class Board extends React.Component {
                               </a>
                             </li>
                             <li>
-                              <a href="#" data-toggle="tooltip" title="Harry">
+                              <a href="a" data-toggle="tooltip" title="Harry">
                                 <img
                                   alt="Harry Xai"
                                   className="avatar"
@@ -1123,7 +1116,7 @@ class Board extends React.Component {
                               </a>
                             </li>
                             <li>
-                              <a href="#" data-toggle="tooltip" title="Claire">
+                              <a href="a" data-toggle="tooltip" title="Claire">
                                 <img
                                   alt="Claire Connors"
                                   className="avatar"
@@ -1168,20 +1161,20 @@ class Board extends React.Component {
                             <div className="dropdown-menu dropdown-menu-right">
                               <a
                                 className="dropdown-item"
-                                href="#"
+                                href="a"
                                 data-toggle="modal"
                                 data-target="#forms-modal"
                               >
                                 Edit
                               </a>
-                              <a className="dropdown-item text-danger" href="#">
+                              <a className="dropdown-item text-danger" href="a">
                                 Archive Card
                               </a>
                             </div>
                           </div>
                           <div className="card-title">
                             <a
-                              href="#"
+                              href="a"
                               data-toggle="modal"
                               data-target="#task-modal"
                             >
@@ -1191,7 +1184,7 @@ class Board extends React.Component {
                           <ul className="avatars">
                             <li>
                               <a
-                                href="#"
+                                href="a"
                                 data-toggle="tooltip"
                                 title="Kerri-Anne"
                               >
@@ -1203,7 +1196,7 @@ class Board extends React.Component {
                               </a>
                             </li>
                             <li>
-                              <a href="#" data-toggle="tooltip" title="Masimba">
+                              <a href="a" data-toggle="tooltip" title="Masimba">
                                 <img
                                   alt="Masimba Sibanda"
                                   className="avatar"
@@ -1246,17 +1239,17 @@ class Board extends React.Component {
                               <i className="material-icons">more_vert</i>
                             </button>
                             <div className="dropdown-menu dropdown-menu-right">
-                              <a className="dropdown-item" href="#">
+                              <a className="dropdown-item" href="a">
                                 Edit
                               </a>
-                              <a className="dropdown-item text-danger" href="#">
+                              <a className="dropdown-item text-danger" href="a">
                                 Archive Card
                               </a>
                             </div>
                           </div>
                           <div className="card-title">
                             <a
-                              href="#"
+                              href="a"
                               data-toggle="modal"
                               data-target="#task-modal"
                             >
@@ -1297,17 +1290,17 @@ class Board extends React.Component {
                               <i className="material-icons">more_vert</i>
                             </button>
                             <div className="dropdown-menu dropdown-menu-right">
-                              <a className="dropdown-item" href="#">
+                              <a className="dropdown-item" href="a">
                                 Edit
                               </a>
-                              <a className="dropdown-item text-danger" href="#">
+                              <a className="dropdown-item text-danger" href="a">
                                 Archive Card
                               </a>
                             </div>
                           </div>
                           <div className="card-title">
                             <a
-                              href="#"
+                              href="a"
                               data-toggle="modal"
                               data-target="#task-modal"
                             >
@@ -1316,7 +1309,7 @@ class Board extends React.Component {
                           </div>
                           <ul className="avatars">
                             <li>
-                              <a href="#" data-toggle="tooltip" title="Masimba">
+                              <a href="a" data-toggle="tooltip" title="Masimba">
                                 <img
                                   alt="Masimba Sibanda"
                                   className="avatar"
@@ -1325,7 +1318,7 @@ class Board extends React.Component {
                               </a>
                             </li>
                             <li>
-                              <a href="#" data-toggle="tooltip" title="Ravi">
+                              <a href="a" data-toggle="tooltip" title="Ravi">
                                 <img
                                   alt="Ravi Singh"
                                   className="avatar"
@@ -1334,7 +1327,7 @@ class Board extends React.Component {
                               </a>
                             </li>
                             <li>
-                              <a href="#" data-toggle="tooltip" title="Harry">
+                              <a href="a" data-toggle="tooltip" title="Harry">
                                 <img
                                   alt="Harry Xai"
                                   className="avatar"
@@ -1344,7 +1337,7 @@ class Board extends React.Component {
                             </li>
                             <li>
                               <a
-                                href="#"
+                                href="a"
                                 data-toggle="tooltip"
                                 title="Kerri-Anne"
                               >
@@ -1356,7 +1349,7 @@ class Board extends React.Component {
                               </a>
                             </li>
                             <li>
-                              <a href="#" data-toggle="tooltip" title="David">
+                              <a href="a" data-toggle="tooltip" title="David">
                                 <img
                                   alt="David Whittaker"
                                   className="avatar"
@@ -1365,7 +1358,7 @@ class Board extends React.Component {
                               </a>
                             </li>
                             <li>
-                              <a href="#" data-toggle="tooltip" title="Claire">
+                              <a href="a" data-toggle="tooltip" title="Claire">
                                 <img
                                   alt="Claire Connors"
                                   className="avatar"
@@ -1374,7 +1367,7 @@ class Board extends React.Component {
                               </a>
                             </li>
                             <li>
-                              <a href="#" data-toggle="tooltip" title="Marcus">
+                              <a href="a" data-toggle="tooltip" title="Marcus">
                                 <img
                                   alt="Marcus Simmons"
                                   className="avatar"
@@ -1442,10 +1435,10 @@ class Board extends React.Component {
                           <i className="material-icons">more_vert</i>
                         </button>
                         <div className="dropdown-menu dropdown-menu-right">
-                          <a className="dropdown-item" href="#">
+                          <a className="dropdown-item" href="a">
                             Edit
                           </a>
-                          <a className="dropdown-item text-danger" href="#">
+                          <a className="dropdown-item text-danger" href="a">
                             Archive List
                           </a>
                         </div>
@@ -1481,17 +1474,17 @@ class Board extends React.Component {
                               <i className="material-icons">more_vert</i>
                             </button>
                             <div className="dropdown-menu dropdown-menu-right">
-                              <a className="dropdown-item" href="#">
+                              <a className="dropdown-item" href="a">
                                 Edit
                               </a>
-                              <a className="dropdown-item text-danger" href="#">
+                              <a className="dropdown-item text-danger" href="a">
                                 Archive Card
                               </a>
                             </div>
                           </div>
                           <div className="card-title">
                             <a
-                              href="#"
+                              href="a"
                               data-toggle="modal"
                               data-target="#task-modal"
                             >
@@ -1500,7 +1493,7 @@ class Board extends React.Component {
                           </div>
                           <ul className="avatars">
                             <li>
-                              <a href="#" data-toggle="tooltip" title="Peggy">
+                              <a href="a" data-toggle="tooltip" title="Peggy">
                                 <img
                                   alt="Peggy Brown"
                                   className="avatar"
@@ -1509,7 +1502,7 @@ class Board extends React.Component {
                               </a>
                             </li>
                             <li>
-                              <a href="#" data-toggle="tooltip" title="Ravi">
+                              <a href="a" data-toggle="tooltip" title="Ravi">
                                 <img
                                   alt="Ravi Singh"
                                   className="avatar"
@@ -1518,7 +1511,7 @@ class Board extends React.Component {
                               </a>
                             </li>
                             <li>
-                              <a href="#" data-toggle="tooltip" title="Marcus">
+                              <a href="a" data-toggle="tooltip" title="Marcus">
                                 <img
                                   alt="Marcus Simmons"
                                   className="avatar"
@@ -1527,7 +1520,7 @@ class Board extends React.Component {
                               </a>
                             </li>
                             <li>
-                              <a href="#" data-toggle="tooltip" title="Harry">
+                              <a href="a" data-toggle="tooltip" title="Harry">
                                 <img
                                   alt="Harry Xai"
                                   className="avatar"
@@ -1582,17 +1575,17 @@ class Board extends React.Component {
                               <i className="material-icons">more_vert</i>
                             </button>
                             <div className="dropdown-menu dropdown-menu-right">
-                              <a className="dropdown-item" href="#">
+                              <a className="dropdown-item" href="a">
                                 Edit
                               </a>
-                              <a className="dropdown-item text-danger" href="#">
+                              <a className="dropdown-item text-danger" href="a">
                                 Archive Card
                               </a>
                             </div>
                           </div>
                           <div className="card-title">
                             <a
-                              href="#"
+                              href="a"
                               data-toggle="modal"
                               data-target="#task-modal"
                             >
@@ -1601,7 +1594,7 @@ class Board extends React.Component {
                           </div>
                           <ul className="avatars">
                             <li>
-                              <a href="#" data-toggle="tooltip" title="David">
+                              <a href="a" data-toggle="tooltip" title="David">
                                 <img
                                   alt="David Whittaker"
                                   className="avatar"
@@ -1611,7 +1604,7 @@ class Board extends React.Component {
                             </li>
                             <li>
                               <a
-                                href="#"
+                                href="a"
                                 data-toggle="tooltip"
                                 title="Kristina"
                               >
@@ -1669,17 +1662,17 @@ class Board extends React.Component {
                               <i className="material-icons">more_vert</i>
                             </button>
                             <div className="dropdown-menu dropdown-menu-right">
-                              <a className="dropdown-item" href="#">
+                              <a className="dropdown-item" href="a">
                                 Edit
                               </a>
-                              <a className="dropdown-item text-danger" href="#">
+                              <a className="dropdown-item text-danger" href="a">
                                 Archive Card
                               </a>
                             </div>
                           </div>
                           <div className="card-title">
                             <a
-                              href="#"
+                              href="a"
                               data-toggle="modal"
                               data-target="#task-modal"
                             >
@@ -1688,7 +1681,7 @@ class Board extends React.Component {
                           </div>
                           <ul className="avatars">
                             <li>
-                              <a href="#" data-toggle="tooltip" title="Claire">
+                              <a href="a" data-toggle="tooltip" title="Claire">
                                 <img
                                   alt="Claire Connors"
                                   className="avatar"
@@ -1736,17 +1729,16 @@ class Board extends React.Component {
                       backgroundColor: "black"
                     }}
                   >
-                    <button
-                      className="btn btn-link btn-sm text-small"
-                      style={{
-                        color: "#D7E868"
-                      }}
-                      href="#"
-                      data-toggle="kanban-col"
-                      data-target="#new-column"
-                    >
-                      Add column
-                    </button>
+                     <button
+                        className="btn btn-link btn-sm text-small"
+                        style={{
+                          color: "#61B8A2"
+                        }}
+                        data-toggle="modal"
+                        data-target="#new-collumn"
+                      >
+                        Add Collumn
+                      </button>
                   </div>
                 </div>
               </div>
@@ -1782,7 +1774,7 @@ class Board extends React.Component {
                         <ul className="avatars">
                           <li>
                             <a
-                              href="#"
+                              href="a"
                               data-toggle="tooltip"
                               data-placement="top"
                               title="Claire Connors"
@@ -1796,7 +1788,7 @@ class Board extends React.Component {
                           </li>
                           <li>
                             <a
-                              href="#"
+                              href="a"
                               data-toggle="tooltip"
                               data-placement="top"
                               title="Marcus Simmons"
@@ -1810,7 +1802,7 @@ class Board extends React.Component {
                           </li>
                           <li>
                             <a
-                              href="#"
+                              href="a"
                               data-toggle="tooltip"
                               data-placement="top"
                               title="Peggy Brown"
@@ -1824,7 +1816,7 @@ class Board extends React.Component {
                           </li>
                           <li>
                             <a
-                              href="#"
+                              href="a"
                               data-toggle="tooltip"
                               data-placement="top"
                               title="Harry Xai"
@@ -1838,7 +1830,7 @@ class Board extends React.Component {
                           </li>
                           <li>
                             <a
-                              href="#"
+                              href="a"
                               data-toggle="tooltip"
                               data-placement="top"
                               title="Sally Harper"
@@ -1852,7 +1844,7 @@ class Board extends React.Component {
                           </li>
                           <li>
                             <a
-                              href="#"
+                              href="a"
                               data-toggle="tooltip"
                               data-placement="top"
                               title="Ravi Singh"
@@ -1866,7 +1858,7 @@ class Board extends React.Component {
                           </li>
                           <li>
                             <a
-                              href="#"
+                              href="a"
                               data-toggle="tooltip"
                               data-placement="top"
                               title="Kristina Van Der Stroem"
@@ -1880,7 +1872,7 @@ class Board extends React.Component {
                           </li>
                           <li>
                             <a
-                              href="#"
+                              href="a"
                               data-toggle="tooltip"
                               data-placement="top"
                               title="David Whittaker"
@@ -2279,12 +2271,12 @@ class Board extends React.Component {
                                       </i>
                                     </button>
                                     <div className="dropdown-menu dropdown-menu-right">
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="a">
                                         Edit
                                       </a>
                                       <a
                                         className="dropdown-item text-danger"
-                                        href="#"
+                                        href="a"
                                       >
                                         Delete
                                       </a>
@@ -2300,18 +2292,18 @@ class Board extends React.Component {
                                 </p>
                                 <ul>
                                   <li>
-                                    <a href="#">
+                                    <a href="a">
                                       Commonwealth Bank of Australia
                                     </a>{" "}
                                     for the bright, positive color scheme
                                   </li>
                                   <li>
-                                    <a href="#">Bupa Health Insurance</a> for
+                                    <a href="a">Bupa Health Insurance</a> for
                                     the adaptability of their logo around the
                                     site's layout
                                   </li>
                                   <li>
-                                    <a href="#">OPSM</a> again for the color
+                                    <a href="a">OPSM</a> again for the color
                                     scheme, this time for the softer pallette
                                   </li>
                                 </ul>
@@ -2350,12 +2342,12 @@ class Board extends React.Component {
                                       </i>
                                     </button>
                                     <div className="dropdown-menu dropdown-menu-right">
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="a">
                                         Edit
                                       </a>
                                       <a
                                         className="dropdown-item text-danger"
-                                        href="#"
+                                        href="a"
                                       >
                                         Delete
                                       </a>
@@ -2371,7 +2363,7 @@ class Board extends React.Component {
                                   but it does give us a starting point for the
                                   mood boards. I recommend we use larger
                                   corporates who target 'youthful' audiences as
-                                  initial inspiration. <a href="#">@Peggy</a>{" "}
+                                  initial inspiration. <a href="a">@Peggy</a>{" "}
                                   will take the lead from here.
                                 </p>
                               </div>
@@ -2409,12 +2401,12 @@ class Board extends React.Component {
                                       </i>
                                     </button>
                                     <div className="dropdown-menu dropdown-menu-right">
-                                      <a className="dropdown-item" href="#">
+                                      <a className="dropdown-item" href="a">
                                         Edit
                                       </a>
                                       <a
                                         className="dropdown-item text-danger"
-                                        href="#"
+                                        href="a"
                                       >
                                         Delete
                                       </a>
@@ -2425,7 +2417,7 @@ class Board extends React.Component {
                               <div className="card-body" data-filter-by="text">
                                 <p>
                                   Hey guys, here's the link to the Matboards:{" "}
-                                  <a href="#">https://matboard.io/3928462</a>
+                                  <a href="a">https://matboard.io/3928462</a>
                                 </p>
                               </div>
                             </div>
@@ -2487,7 +2479,7 @@ class Board extends React.Component {
                                   </ul>
                                   <div className="media-body d-flex justify-content-between align-items-center">
                                     <div className="dz-file-details">
-                                      <a href="#" className="dz-filename">
+                                      <a href="a" className="dz-filename">
                                         <span data-dz-name />
                                       </a>
                                       <br />
@@ -2514,16 +2506,16 @@ class Board extends React.Component {
                                         </i>
                                       </button>
                                       <div className="dropdown-menu dropdown-menu-right">
-                                        <a className="dropdown-item" href="#">
+                                        <a className="dropdown-item" href="a">
                                           Download
                                         </a>
-                                        <a className="dropdown-item" href="#">
+                                        <a className="dropdown-item" href="a">
                                           Share
                                         </a>
                                         <div className="dropdown-divider" />
                                         <a
                                           className="dropdown-item text-danger"
-                                          href="#"
+                                          href="a"
                                           data-dz-remove
                                         >
                                           Delete
@@ -2578,7 +2570,7 @@ class Board extends React.Component {
                                   </ul>
                                   <div className="media-body d-flex justify-content-between align-items-center">
                                     <div>
-                                      <a href="#" data-filter-by="text">
+                                      <a href="a" data-filter-by="text">
                                         client-questionnaire
                                       </a>
                                       <br />
@@ -2602,16 +2594,16 @@ class Board extends React.Component {
                                         </i>
                                       </button>
                                       <div className="dropdown-menu dropdown-menu-right">
-                                        <a className="dropdown-item" href="#">
+                                        <a className="dropdown-item" href="a">
                                           Download
                                         </a>
-                                        <a className="dropdown-item" href="#">
+                                        <a className="dropdown-item" href="a">
                                           Share
                                         </a>
                                         <div className="dropdown-divider" />
                                         <a
                                           className="dropdown-item text-danger"
-                                          href="#"
+                                          href="a"
                                         >
                                           Delete
                                         </a>
@@ -2641,7 +2633,7 @@ class Board extends React.Component {
                                   </ul>
                                   <div className="media-body d-flex justify-content-between align-items-center">
                                     <div>
-                                      <a href="#" data-filter-by="text">
+                                      <a href="a" data-filter-by="text">
                                         moodboard_images
                                       </a>
                                       <br />
@@ -2665,16 +2657,16 @@ class Board extends React.Component {
                                         </i>
                                       </button>
                                       <div className="dropdown-menu dropdown-menu-right">
-                                        <a className="dropdown-item" href="#">
+                                        <a className="dropdown-item" href="a">
                                           Download
                                         </a>
-                                        <a className="dropdown-item" href="#">
+                                        <a className="dropdown-item" href="a">
                                           Share
                                         </a>
                                         <div className="dropdown-divider" />
                                         <a
                                           className="dropdown-item text-danger"
-                                          href="#"
+                                          href="a"
                                         >
                                           Delete
                                         </a>
@@ -2704,7 +2696,7 @@ class Board extends React.Component {
                                   </ul>
                                   <div className="media-body d-flex justify-content-between align-items-center">
                                     <div>
-                                      <a href="#" data-filter-by="text">
+                                      <a href="a" data-filter-by="text">
                                         possible-hero-image
                                       </a>
                                       <br />
@@ -2728,16 +2720,16 @@ class Board extends React.Component {
                                         </i>
                                       </button>
                                       <div className="dropdown-menu dropdown-menu-right">
-                                        <a className="dropdown-item" href="#">
+                                        <a className="dropdown-item" href="a">
                                           Download
                                         </a>
-                                        <a className="dropdown-item" href="#">
+                                        <a className="dropdown-item" href="a">
                                           Share
                                         </a>
                                         <div className="dropdown-divider" />
                                         <a
                                           className="dropdown-item text-danger"
-                                          href="#"
+                                          href="a"
                                         >
                                           Delete
                                         </a>
@@ -2769,7 +2761,7 @@ class Board extends React.Component {
                                   </ul>
                                   <div className="media-body d-flex justify-content-between align-items-center">
                                     <div>
-                                      <a href="#" data-filter-by="text">
+                                      <a href="a" data-filter-by="text">
                                         LandingPrototypes
                                       </a>
                                       <br />
@@ -2793,16 +2785,16 @@ class Board extends React.Component {
                                         </i>
                                       </button>
                                       <div className="dropdown-menu dropdown-menu-right">
-                                        <a className="dropdown-item" href="#">
+                                        <a className="dropdown-item" href="a">
                                           Download
                                         </a>
-                                        <a className="dropdown-item" href="#">
+                                        <a className="dropdown-item" href="a">
                                           Share
                                         </a>
                                         <div className="dropdown-divider" />
                                         <a
                                           className="dropdown-item text-danger"
-                                          href="#"
+                                          href="a"
                                         >
                                           Delete
                                         </a>
@@ -2834,7 +2826,7 @@ class Board extends React.Component {
                                   </ul>
                                   <div className="media-body d-flex justify-content-between align-items-center">
                                     <div>
-                                      <a href="#" data-filter-by="text">
+                                      <a href="a" data-filter-by="text">
                                         Branding-Proforma
                                       </a>
                                       <br />
@@ -2858,16 +2850,16 @@ class Board extends React.Component {
                                         </i>
                                       </button>
                                       <div className="dropdown-menu dropdown-menu-right">
-                                        <a className="dropdown-item" href="#">
+                                        <a className="dropdown-item" href="a">
                                           Download
                                         </a>
-                                        <a className="dropdown-item" href="#">
+                                        <a className="dropdown-item" href="a">
                                           Share
                                         </a>
                                         <div className="dropdown-divider" />
                                         <a
                                           className="dropdown-item text-danger"
-                                          href="#"
+                                          href="a"
                                         >
                                           Delete
                                         </a>
@@ -2941,7 +2933,7 @@ class Board extends React.Component {
                                       <span data-filter-by="text">
                                         added the note
                                       </span>
-                                      <a href="#" data-filter-by="text">
+                                      <a href="a" data-filter-by="text">
                                         Client Meeting Notes
                                       </a>
                                     </div>
@@ -2982,7 +2974,7 @@ class Board extends React.Component {
                                       <span data-filter-by="text">
                                         added the note
                                       </span>
-                                      <a href="#" data-filter-by="text">
+                                      <a href="a" data-filter-by="text">
                                         Aesthetic note
                                       </a>
                                     </div>
@@ -3550,7 +3542,6 @@ class Board extends React.Component {
                           {}
                           <div className="modal-footer">
                             <button
-                              role="button"
                               className="btn btn-primary"
                               type="submit"
                             >
@@ -4053,7 +4044,6 @@ class Board extends React.Component {
                           {}
                           <div className="modal-footer">
                             <button
-                              role="button"
                               className="btn btn-primary"
                               type="submit"
                             >
@@ -4107,7 +4097,6 @@ class Board extends React.Component {
                           {}
                           <div className="modal-footer">
                             <button
-                              role="button"
                               className="btn btn-primary"
                               type="submit"
                             >
@@ -4225,7 +4214,7 @@ class Board extends React.Component {
                                 />
                               </svg>
                               <a
-                                href="#"
+                                href="members"
                                 data-filter-by="text"
                                 style={{
                                   color: "black"
@@ -4258,7 +4247,7 @@ class Board extends React.Component {
                                 />
                               </svg>
                               <a
-                                href="#"
+                                href="duedate"
                                 data-filter-by="text"
                                 style={{
                                   color: "black"
@@ -4290,7 +4279,7 @@ class Board extends React.Component {
                                 />
                               </svg>
                               <a
-                                href="#"
+                                href="labels"
                                 data-filter-by="text"
                                 style={{
                                   color: "black"
@@ -4327,7 +4316,7 @@ class Board extends React.Component {
                                 />
                               </svg>
                               <a
-                                href="#"
+                                href="checklist"
                                 data-filter-by="text"
                                 style={{
                                   color: "black"
@@ -4365,7 +4354,7 @@ class Board extends React.Component {
                                 />
                               </svg>
                               <a
-                                href="#"
+                                href="documents"
                                 data-filter-by="text"
                                 style={{
                                   color: "black"
@@ -4417,6 +4406,77 @@ class Board extends React.Component {
             </div>
           </div>
         </div>
+		<div
+          className="modal fade"
+          tabIndex={-1}
+          role="dialog"
+          id="new-collumn"
+        >
+          <div className="modal-dialog modal-lg" role="document">
+            <div className="modal-content">
+              <div
+                className="modal-header"
+                style={{
+                  backgroundColor: "#343a40"
+                }}
+              >
+                <h5
+                  className="modal-title"
+                  style={{
+                    backgroundColor: "#343a40",
+                    color: "#D7E868"
+                  }}
+                >
+                  Collumn
+                </h5>
+                <button
+                  type="button"
+                  className="close btn btn-round"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <i className="material-icons">close</i>
+                </button>
+              </div>
+              {}
+              <div className="modal-body">
+                <div className="component-demo">
+                  <form onSubmit={this.submitHandler}>
+                    <div className="form-group">
+					<p>TITLE</p>
+                      <input
+                        type="text"
+                        name="title"
+                        placeholder="Write here "
+                        value={title}
+                        onChange={this.changeHandler}
+                      />
+                    </div>
+					<div className="form-group">
+					<p>BOARDID</p>
+                      <input
+                        type="number"
+						pattern="[0-9]*"
+                        name="boardId"
+                        value={boardId}
+                        onChange={this.changeHandler}
+                      />
+                    </div>
+                        <button
+                            type="submit"
+                            style={{
+                            backgroundColor: "#D7E868",
+                            color: "black"
+                            }}
+                        >
+                            Save
+                        </button>
+						</form>
+                </div>
+                </div>
+                </div>
+				</div>
+				</div>
         <div
           className="modal fade"
           tabIndex={-1}
@@ -4593,4 +4653,4 @@ class Board extends React.Component {
   }
 }
 
-export default Board;
+export default BoardForm;

@@ -290,5 +290,8 @@ C:\Users\Aline\Desktop\React-CRUD-with-Asp.Net-Core-Web-API\Backend\obj\Debug\ne
 C:\Users\Aline\Desktop\React-CRUD-with-Asp.Net-Core-Web-API\Backend\obj\Debug\netcoreapp3.1\Backend.dll
 C:\Users\Aline\Desktop\React-CRUD-with-Asp.Net-Core-Web-API\Backend\obj\Debug\netcoreapp3.1\Backend.pdb
 C:\Users\Aline\Desktop\React-CRUD-with-Asp.Net-Core-Web-API\Backend\obj\Debug\netcoreapp3.1\Backend.genruntimeconfig.cache
+C:\Users\Aline\Desktop\React-CRUD-with-Asp.Net-Core-Web-API\Backend\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Aline\Desktop\React-CRUD-with-Asp.Net-Core-Web-API\Backend\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Aline\Desktop\React-CRUD-with-Asp.Net-Core-Web-API\Backend\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\Aline\Desktop\React-CRUD-with-Asp.Net-Core-Web-API\Backend\obj\Debug\netcoreapp3.1\Backend.csproj.CoreCompileInputs.cache
 C:\Users\Aline\Desktop\React-CRUD-with-Asp.Net-Core-Web-API\Backend\obj\Debug\netcoreapp3.1\Backend.MvcApplicationPartsAssemblyInfo.cache

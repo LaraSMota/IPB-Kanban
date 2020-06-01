@@ -1,41 +1,11 @@
 import React from "react";
-import axios from "axios";
 
-
-class CreateBoard extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: [],
-      value: [],
-      loading: true,
-      error: false,
-    };
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }  
-  onChange(e) {
-     this.setState({[e.target.name]: e.target.value})
- } 
-
-
- handleSubmit(e) {
-  e.preventDefault();
-  const data = {
-    title: this.state.title,
-    description: this.state.description,
-    background: this.state.background,
-  };
-  axios.post('http://localhost:5000/api/Boards', { data })
-  .then(res => {
-    console.log(data);
-  })
- }
-
+class About extends React.Component {
   render() {
     return (
       <div className="layout layout-nav-top">
         <div className="navbar navbar-expand-lg sticky-top">
-          <a className="navbar-brand" href="home.html">
+          <a className="navbar-brand" href="home">
             <img
               alt="Logo"
               src="assets\\img\\cardBe.png"
@@ -53,13 +23,13 @@ class CreateBoard extends React.Component {
           >
             <ul className="navbar-nav">
               <li className="nav nav-fill" role="tablist">
-                <a className="nav-link" href="Home.html">
+                <a className="nav-link" href="home">
                   Home
                 </a>
-                <a className="nav-link" href="error-report.html">
+                <a className="nav-link" href="error-report">
                   Error Report
                 </a>
-                <a className="nav-link" href="about.html">
+                <a className="nav-link active" href="about">
                   About
                 </a>
               </li>
@@ -111,13 +81,11 @@ class CreateBoard extends React.Component {
                   Add New
                 </button>
                 <div className="dropdown-menu">
-                  <a className="dropdown-item" href="create-board.html">
+                  <a className="dropdown-item" href="create-board">
                     Board
                   </a>
                   <a
-                    className="dropdown-item"
-                    data-toggle="modal"
-                    data-target="#team-add-modal"
+                    className="dropdown-item" href="team"
                   >
                     Team
                   </a>
@@ -139,11 +107,11 @@ class CreateBoard extends React.Component {
                     />
                   </a>
                   <div className="dropdown-menu dropdown-menu-right">
-                    <a href="account-settings.html" className="dropdown-item">
+                    <a href="account-settings" className="dropdown-item">
                       Account Settings
                     </a>
                     <a
-                      href="index.html"
+                      href="/"
                       className="dropdown-item"
                       style={{
                         color: "rgb(219, 41, 41)"
@@ -207,7 +175,6 @@ class CreateBoard extends React.Component {
                         Title
                       </label>
                       <input
-                        value={this.state.title} onChange={this.handleInputChange}
                         className="form-control col"
                         type="text"
                         placeholder="Team name"
@@ -563,124 +530,51 @@ class CreateBoard extends React.Component {
         <div className="main-container">
           <div className="container-fluid">
             <div className="row justify-content-center">
-              <div className="col-xl-10 col-lg-11">
-                  <div className="form-group">
-                  <p 
+              <div className="col-lg-11 col-xl-10">
+                <div className="page-header">
+                  <h1
                     style={{
-                      color: "#D7E868"
+                      color: "#A5D5AB"
                     }}
-                    >TITLE
-                    </p>
-                    <input
-                        id='title' 
-                        name='Title'
-                        value={this.state.title}
-                        onChange={this.onChange}
-                        style={{
-                        backgroundColor: "#393B39",
-                        color: "#D7E868"
-                      }}
-                    />
-                  </div>
-                  <form>
-                  <div className="form-group">
-                  <p 
+                  >
+                    About CardBe
+                  </h1>
+                  <p className="lead">
+                    CardBe is a software designed for the subject 'Multimedia
+                    Application Development', taught at Polytechnic Institute of
+                    Bragança for a master degree in Information Systems. This
+                    project was built in a collaboration of the students: Aline
+                    Lopes, Lara Mota, Leonardo Costa and Lucas Maltauro under
+                    the tutor of the Doctor Professor Paulo Alves.{" "}
+                  </p>
+                  <p
+                    className="lead"
                     style={{
-                      color: "#D7E868"
+                      color: "#A5D5AB"
                     }}
-                    >DESCRIPTION
-                    </p>
-                    <textarea
-                      onChange={this.onChange}
-                      name="profile-bio"
-                      className="form-control"
-                      rows={4}
-                      style={{
-                        backgroundColor: "#393B39",
-                        color: "#D7E868"
-                      }}
-                      defaultValue={""}
-                    />
-                  </div>
-                </form>
-                <p 
-                    style={{
-                      color: "#D7E868"
-                    }}
-                    >BACKGROUND
-                    </p>
-    
-                <div className="row">
-                  <div className="col-xl-4 col-6">
-                    <div className="card mb-3">
-                      <a
-                        href="a"
-                        data-toggle="modal"
-                        data-target="#activity-modal"
-                      >
-                        <img
-                          alt="Imagem"
-                          className="card-img-top"
-                          src="assets\\img\\components\\imagem3.PNG"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="col-xl-4 col-6">
-                    <div className="card mb-3">
-                      <a
-                        href="a"
-                        data-toggle="modal"
-                        data-target="#avatar-modal"
-                      >
-                        <img
-                          alt="Avatar"
-                          className="card-img-top"
-                          src="assets\\img\\components\\imagem2.PNG"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="col-xl-4 col-6">
-                    <div className="card mb-3">
-                      <a
-                        href="a"
-                        data-toggle="modal"
-                        data-target="#avatar-list-modal"
-                      >
-                        <img
-                          alt="Avatar List"
-                          className="card-img-top"
-                          src="assets\\img\\components\\imagem3.PNG"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="form-group form-button">
-                    <button
-                      type="submit"
-                      onClick={(e) => this.handleSubmit }
-                      style={{
-                        backgroundColor: "#A5D5AB"
-                      }}
-                    >
-                      <p 
-                      href="board"
-                      style={{
-                      color: "#393B39"
-                    }}
-                    >CREATE
-                    </p>
-                    </button>
+                  >
+                    Logo made by @spacegirl.ag
+                  </p>
+                  <div className="d-flex align-items-center">
+                    <ul className="avatars"></ul>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        {}
+        {}
+        {}
+        {}
+        {}
+        {}
+        {}
+        {}
+        {}
       </div>
     );
   }
 }
 
-export default CreateBoard;
+export default About;

@@ -1,6 +1,6 @@
 import React from "react";
 
-class About extends React.Component {
+class ErroReport extends React.Component {
   render() {
     return (
       <div className="layout layout-nav-top">
@@ -26,10 +26,10 @@ class About extends React.Component {
                 <a className="nav-link" href="home">
                   Home
                 </a>
-                <a className="nav-link" href="error-report">
+                <a className="nav-link active" href="error-report">
                   Error Report
                 </a>
-                <a className="nav-link active" href="about">
+                <a className="nav-link" href="about">
                   About
                 </a>
               </li>
@@ -85,9 +85,8 @@ class About extends React.Component {
                     Board
                   </a>
                   <a
-                    className="dropdown-item"
-                    data-toggle="modal"
-                    data-target="#team-add-modal"
+                  className="dropdown-item"
+                  href="team"
                   >
                     Team
                   </a>
@@ -96,14 +95,14 @@ class About extends React.Component {
               <div className="d-none d-lg-block">
                 <div className="dropdown">
                   <a
-                    href="#"
+                    href="a"
                     role="button"
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
                     <img
-                      alt="Image"
+                      alt=""
                       src="assets\\img\\avatar-male-4.jpg"
                       className="avatar"
                     />
@@ -522,7 +521,7 @@ class About extends React.Component {
               </div>
               {}
               <div className="modal-footer">
-                <button role="button" className="btn btn-primary" type="submit">
+                <button  className="btn btn-primary" type="submit">
                   Done
                 </button>
               </div>
@@ -539,24 +538,18 @@ class About extends React.Component {
                       color: "#A5D5AB"
                     }}
                   >
-                    About CardBe
+                    ERROR REPORT
                   </h1>
-                  <p className="lead">
-                    CardBe is a software designed for the subject 'Multimedia
-                    Application Development', taught at Polytechnic Institute of
-                    Bragança for a master degree in Information Systems. This
-                    project was built in a collaboration of the students: Aline
-                    Lopes, Lara Mota, Leonardo Costa and Lucas Maltauro under
-                    the tutor of the Doctor Professor Paulo Alves.{" "}
-                  </p>
-                  <p
-                    className="lead"
+                  <h4
                     style={{
-                      color: "#A5D5AB"
+                      color: "#E8EFC3"
                     }}
                   >
-                    Logo made by @spacegirl.ag
-                  </p>
+                    If you have any problem, please contact us and we will take
+                    a look in your situation:
+                  </h4>
+                  <p className="lead">Email: cardbe@email.com</p>
+                  <p className="lead">Phone: +351 XXX XXX XXX</p>
                   <div className="d-flex align-items-center">
                     <ul className="avatars"></ul>
                   </div>
@@ -565,18 +558,9 @@ class About extends React.Component {
             </div>
           </div>
         </div>
-        {}
-        {}
-        {}
-        {}
-        {}
-        {}
-        {}
-        {}
-        {}
       </div>
     );
   }
 }
 
-export default About;
+export default ErroReport;

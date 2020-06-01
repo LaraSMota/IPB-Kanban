@@ -5,7 +5,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
   --yellow:#d7e868;
   --dark-theme:#393B39;
   --verde-claro:#A5D5AB;
@@ -310,7 +310,7 @@ h1, h2, h3, h4, h5, h6,
   margin-bottom: 0.75rem;
   font-weight: 500;
   line-height: 1.2;
-  color: #212529; }
+  color: #61B8A2; }
 
 h1, .h1 {
   font-size: 2.5rem; }
@@ -3283,6 +3283,9 @@ input[type="button"].btn-block {
     border-bottom-left-radius: 0.5rem; }
 
 .card-body {
+  color: #D7E868;
+  background-color: #393B39;
+  border: 1px, solid, #61B8A2;
   flex: 1 1 auto;
   padding: 1.5rem; }
 

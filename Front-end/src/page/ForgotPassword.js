@@ -36,12 +36,12 @@ class ForgotPassword extends React.Component {
               <div className="col-xl-5 col-lg-6 col-md-7">
                 <div className="text-center">
                   <h1
-                    className="h2"
+                    className="h1"
                     style={{
                       color: "#E8EFC3"
                     }}
                   >
-                    Forgot password 😫
+                    Forgot password 
                   </h1>
                   <p className="lead">Enter your email address to reset</p>
                   <form>
