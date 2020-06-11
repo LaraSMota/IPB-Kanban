@@ -94,7 +94,7 @@ class About extends React.Component {
               <div className="d-none d-lg-block">
                 <div className="dropdown">
                   <a
-                    href="a"
+                    href="account-settings"
                     role="button"
                     data-toggle="dropdown"
                     aria-haspopup="true"

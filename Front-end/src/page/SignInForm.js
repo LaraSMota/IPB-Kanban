@@ -96,6 +96,10 @@ class SignInForm extends Component {
                       name="signin"
                       id="signin"
                       className="form-submit"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href='http://localhost:3000/home';
+                        }}
                     >
                       Login
                     </button>

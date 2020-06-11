@@ -168,7 +168,7 @@ class CreateBoardForm extends Component {
 											Account Settings
 						</a>
 										<a
-											href="logout"
+											href="/"
 											className="dropdown-item"
 											style={{
 												color: "rgb(219, 41, 41)"

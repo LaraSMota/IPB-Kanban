@@ -134,10 +134,15 @@ class SignUpForm extends Component {
                   <div className="form-group form-button">
                     <button
                      type="submit"
-                     onClick={(e) => {
-                      e.preventDefault();
-                      window.location.href='http://localhost:3000/home';
-                      }}
+                      href="/home"
+                      name="signin"
+                      id="signin"
+                      className="form-submit"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href='http://localhost:3000/';
+                        }}
+                      
                     >
                       Register
                     </button>
