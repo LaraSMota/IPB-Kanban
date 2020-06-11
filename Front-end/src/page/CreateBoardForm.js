@@ -1,5 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Form from 'react-bootstrap/Form'
+import ImagePicker from 'react-image-picker'
+import 'react-image-picker/dist/index.css'
+
+import img1 from '../img/florbranca.jpg'
+import img2 from '../img/frutas.jpg'
+import img3 from '../img/palmeira2.jpg'
+import img4 from '../img/rosas.jpg'
+
+const imageList = [img1, img2, img3, img4]
 
 class CreateBoardForm extends Component {
 	constructor(props) {
@@ -8,9 +18,15 @@ class CreateBoardForm extends Component {
 		this.state = {
 			title: '',
 			description: '',
-			background: ''
+			background: '',
+			image: null
 		}
+		this.onPick = this.onPick.bind(this)
 	}
+
+	onPick(image) {
+		this.setState({image})
+	  }
 
 	changeHandler = e => {
 		this.setState({ [e.target.name]: e.target.value })
@@ -48,7 +64,7 @@ class CreateBoardForm extends Component {
 		return (
 			<div className="layout layout-nav-top">
 				<div className="navbar navbar-expand-lg sticky-top">
-					<a className="navbar-brand" href="home.html">
+					<a className="navbar-brand" href="home">
 						<img
 							alt="Logo"
 							src="assets\\img\\cardBe.png"
@@ -66,13 +82,13 @@ class CreateBoardForm extends Component {
 					>
 						<ul className="navbar-nav">
 							<li className="nav nav-fill" role="tablist">
-								<a className="nav-link" href="Home.html">
+								<a className="nav-link" href="home">
 									Home
 					</a>
-								<a className="nav-link" href="error-report.html">
+								<a className="nav-link" href="error-report">
 									Error Report
 					</a>
-								<a className="nav-link" href="about.html">
+								<a className="nav-link" href="about">
 									About
 					</a>
 							</li>
@@ -135,7 +151,7 @@ class CreateBoardForm extends Component {
 							<div className="d-none d-lg-block">
 								<div className="dropdown">
 									<a
-										href="a"
+										href="account-settings"
 										role="button"
 										data-toggle="dropdown"
 										aria-haspopup="true"
@@ -148,11 +164,11 @@ class CreateBoardForm extends Component {
 										/>
 									</a>
 									<div className="dropdown-menu dropdown-menu-right">
-										<a href="account-settings.html" className="dropdown-item">
+										<a href="account-settings" className="dropdown-item">
 											Account Settings
 						</a>
 										<a
-											href="index.html"
+											href="logout"
 											className="dropdown-item"
 											style={{
 												color: "rgb(219, 41, 41)"
@@ -576,18 +592,25 @@ class CreateBoardForm extends Component {
 								<div className="row justify-content-center">
 									<div className="col-xl-10 col-lg-11">
 										<div className="form-group">
-											<p
+
+									<Form.Group controlId="form.title">
+									         <p
 												style={{
 													color: "#D7E868"
 												}}
 											>TITLE
-									</p>
-											<input
-												type="text"
+									      </p>
+											<Form.Control 
+											    type="text"
 												name="title"
 												value={title}
 												onChange={this.changeHandler}
-											/>
+												className="form-control"
+												rows={4}
+												style={{
+													backgroundColor: "#393B39",
+													color: "#D7E868"}} />
+										</Form.Group>
 										</div>
 										<div className="form-group">
 											<p
@@ -610,71 +633,16 @@ class CreateBoardForm extends Component {
 											/>
 										</div>
 										<div className="form-group">
-											<p
-												style={{
-													color: "#D7E868"
-												}}
-											>BACKGROUND
-									</p>
-											<div className="row">
-												<div className="col-xl-4 col-6">
-													<div className="card mb-3">
-														<a
-															href="a"
-															data-toggle="modal"
-															data-target="#activity-modal"
-														>
-															<img
-																alt="Imagem"
-																className="card-img-top"
-																src="assets\img\components\imagem3.PNG"
+											<p style={{color: "#D7E868"}}>BACKGROUND</p>
+											<div>
+															<ImagePicker 
+															images={imageList.map((image, i) => ({src: image, value: i}))}
+															onPick={this.onPick}
 															/>
-														</a>
-													</div>
-												</div>
-												<div className="col-xl-4 col-6">
-													<div className="card mb-3">
-														<a
-															href="a"
-															data-toggle="modal"
-															data-target="#avatar-modal"
-														>
-															<img
-																alt="Avatar"
-																className="card-img-top"
-																src="assets\img\components\imagem2.PNG"
-															/>
-														</a>
-													</div>
-												</div>
-												<div className="col-xl-4 col-6">
-													<div className="card mb-3">
-														<a
-															href="a"
-															data-toggle="modal"
-															data-target="#avatar-list-modal"
-														>
-															<img
-																alt="Avatar List"
-																className="card-img-top"
-																src="assets\img\components\imagem3.PNG"
-															/>
-														</a>
-													</div>
-												</div>
-
-											</div>
+															
+														</div>
 											<div className="form-group form-button">
-												<button type="submit"
-													style={{
-														backgroundColor: "#A5D5AB"
-													}}>
-													<p style={{
-														color: "#393B39"
-													}}>
-														CREATE
-										</p>
-												</button>
+											<button type="submit" style={{backgroundColor: "#A5D5AB"}} onClick={() => console.log(this.state.image)}>CREATE</button>
 											</div>
 										</div>
 									</div>

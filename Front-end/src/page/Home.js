@@ -95,7 +95,7 @@ class Home extends React.Component {
               <div className="d-none d-lg-block">
                 <div className="dropdown">
                   <a
-                    href="a"
+                    href="account-settings"
                     role="button"
                     data-toggle="dropdown"
                     aria-haspopup="true"
@@ -112,7 +112,7 @@ class Home extends React.Component {
                       Account Settings
                     </a>
                     <a
-                      href="/"
+                      href="logout"
                       className="dropdown-item"
                       style={{
                         color: "rgb(219, 41, 41)"

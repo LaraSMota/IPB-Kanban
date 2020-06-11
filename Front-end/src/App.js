@@ -3,7 +3,7 @@ import './App.css';
 import CreateBoardForm from './page/CreateBoardForm';
 import SignInForm from './page/SignInForm';
 import SignUpForm from './page/SignUpForm';
-import BoardForm from './page/BoardForm';
+import BoardForm from './page/Board/BoardForm';
 import AccountSettingsForm from './page/AccountSettingsForm';
 import ErrorReport from './page/ErrorReport';
 import Terms from './page/Terms';

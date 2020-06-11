@@ -8852,19 +8852,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aline\\.nuget\\packages\\": {}
+    "C:\\Users\\aline\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aline\\Desktop\\React-CRUD-with-Asp.Net-Core-Web-API\\Backend\\Backend.csproj",
+      "projectUniqueName": "C:\\Users\\aline\\OneDrive\\Documents\\IPB\\Materias\\IPB-Kanban\\Back-end\\Backend.csproj",
       "projectName": "Backend",
-      "projectPath": "C:\\Users\\Aline\\Desktop\\React-CRUD-with-Asp.Net-Core-Web-API\\Backend\\Backend.csproj",
-      "packagesPath": "C:\\Users\\Aline\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aline\\Desktop\\React-CRUD-with-Asp.Net-Core-Web-API\\Backend\\obj\\",
+      "projectPath": "C:\\Users\\aline\\OneDrive\\Documents\\IPB\\Materias\\IPB-Kanban\\Back-end\\Backend.csproj",
+      "packagesPath": "C:\\Users\\aline\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\aline\\OneDrive\\Documents\\IPB\\Materias\\IPB-Kanban\\Back-end\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Aline\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\aline\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8941,7 +8945,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

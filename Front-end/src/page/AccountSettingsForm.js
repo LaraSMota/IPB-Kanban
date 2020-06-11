@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+
 class AccountSettingsForm extends Component {
 	constructor(props) {
 		super(props)
@@ -10,9 +11,12 @@ class AccountSettingsForm extends Component {
 			lastName: '',
             email: '',
             nickname: '',
-            password: ''
+			password: '',
+			image: 'http://example.com/initialimage.jpg'
 		}
 	}
+
+	
 
 	changeHandler = e => {
 		this.setState({ [e.target.name]: e.target.value })
@@ -155,7 +159,7 @@ class AccountSettingsForm extends Component {
 				  <div className="d-none d-lg-block">
 					<div className="dropdown">
 					  <a
-						href="a"
+						href="account-settings"
 						role="button"
 						data-toggle="dropdown"
 						aria-haspopup="true"
@@ -172,7 +176,7 @@ class AccountSettingsForm extends Component {
 						  Account Settings
 						</a>
 						<a
-						  href="/"
+						  href="logout"
 						  className="dropdown-item"
 						  style={{
 							color: "rgb(219, 41, 41)"

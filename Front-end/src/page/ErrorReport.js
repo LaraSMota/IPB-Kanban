@@ -112,7 +112,7 @@ class ErroReport extends React.Component {
                       Account Settings
                     </a>
                     <a
-                      href="/"
+                      href="logout"
                       className="dropdown-item"
                       style={{
                         color: "rgb(219, 41, 41)"
@@ -535,7 +535,7 @@ class ErroReport extends React.Component {
                 <div className="page-header">
                   <h1
                     style={{
-                      color: "#A5D5AB"
+                      color: "#d7e868"
                     }}
                   >
                     ERROR REPORT
@@ -548,8 +548,9 @@ class ErroReport extends React.Component {
                     If you have any problem, please contact us and we will take
                     a look in your situation:
                   </h4>
-                  <p className="lead">Email: cardbe@email.com</p>
-                  <p className="lead">Phone: +351 XXX XXX XXX</p>
+                  <p className="lead"                     style={{
+                      color: "#A5D5AB"
+                    }}>Email: cardbe@email.com</p>
                   <div className="d-flex align-items-center">
                     <ul className="avatars"></ul>
                   </div>
