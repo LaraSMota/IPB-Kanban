@@ -13,7 +13,7 @@ class CreateBoard extends Component {
 
 	componentDidMount() {
 		axios
-			.post('http://localhost:52944/api/Boards/137')
+			.post('http://localhost:52719/api/Boards')
 			.then(response => {
 				console.log(response)
 				this.setState({ posts: response.data })

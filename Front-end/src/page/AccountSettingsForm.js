@@ -26,7 +26,7 @@ class AccountSettingsForm extends Component {
 		e.preventDefault()
 		console.log(this.state)
 		axios
-			.post('http://localhost:52944/api/Users', this.state)
+			.post('http://localhost:52719/api/Users', this.state)
 			.then(response => {
 				console.log(response)
 			})

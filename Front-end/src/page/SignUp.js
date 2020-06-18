@@ -13,7 +13,7 @@ class SignUp extends Component {
 
 	componentDidMount() {
 		axios
-			.get('http://localhost:52944/api/Users')
+			.get('http://localhost:52719/api/Users')
 			.then(response => {
 				console.log(response)
 				this.setState({ posts: response.data })
@@ -30,7 +30,7 @@ class SignUp extends Component {
 			<div>
 				
 				{posts.length
-					? posts.map(post => <div key={post.userid}>{post.firstName}.{post.lastName}.{post.email}.{post.nickname}.{post.password}</div>)
+					? posts.map(post => <div key={post.userid}>{post.firstName}.{post.lastName}.{post.email}.{post.nickname}.{post.password}.{post.picture}.{post.beNotified}</div>)
           : null}
         {errorMsg ? <div>{errorMsg}</div> : null}
 			</div>

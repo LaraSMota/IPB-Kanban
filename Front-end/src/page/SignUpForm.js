@@ -10,7 +10,10 @@ class SignUpForm extends Component {
 			lastName: '',
             email: '',
             nickname: '',
-            password: ''
+            password: '',
+            picture: '',
+            beNotified: ''
+
 		}
 	}
 
@@ -22,7 +25,7 @@ class SignUpForm extends Component {
 		e.preventDefault()
 		console.log(this.state)
 		axios
-			.post('http://localhost:52944/api/Users', this.state)
+			.post('http://localhost:52719/api/Users', this.state)
 			.then(response => {
 				console.log(response)
 			})
@@ -32,7 +35,7 @@ class SignUpForm extends Component {
 	}
 
 	render() {
-        const {  firstName, lastName, email, nickname, password } = this.state
+        const {  firstName, lastName, email, nickname, password, picture, beNotified } = this.state
         return (
                 <div className="main">
                     <div className="container">
@@ -115,6 +118,30 @@ class SignUpForm extends Component {
                             />
                         </div>
                         <div className="form-group">
+                        <label htmlFor="name">
+                           <i className="zmdi zmdi-account material-icons-name" />
+                        </label>
+                            <input
+                                type="text"
+                                name="picture"
+                                placeholder="Picture"
+                                value={picture}
+                                onChange={this.changeHandler}
+                            />
+                        </div>
+                        <div className="form-group">
+                        <label htmlFor="name">
+                           <i className="zmdi zmdi-account material-icons-name" />
+                        </label>
+                            <input
+                                type="text"
+                                name="beNotified"
+                                placeholder="Notified"
+                                value={beNotified}
+                                onChange={this.changeHandler}
+                            />
+                        </div>
+                        <div className="form-group">
                     <input
                       type="checkbox"
                       name="agree-term"
@@ -134,15 +161,10 @@ class SignUpForm extends Component {
                   <div className="form-group form-button">
                     <button
                      type="submit"
-                      href="/home"
+                      href="home"
                       name="signin"
                       id="signin"
                       className="form-submit"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        window.location.href='http://localhost:3000/';
-                        }}
-                      
                     >
                       Register
                     </button>

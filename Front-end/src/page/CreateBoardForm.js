@@ -36,7 +36,7 @@ class CreateBoardForm extends Component {
 		e.preventDefault()
 		console.log(this.state)
 		axios
-			.post('http://localhost:52944/api/Boards', this.state)
+			.post('http://localhost:52719/api/Boards', this.state)
 			.then(response => {
 				console.log(response)
 			})
@@ -49,7 +49,7 @@ class CreateBoardForm extends Component {
 		e.preventDefault()
 		console.log(this.state)
 		axios
-			.delete('http://localhost:52944/api/Boards/137', this.state)
+			.delete('http://localhost:52719/api/Boards', this.state)
 			.then(response => {
 				console.log(response)
 			})
