@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aline\\Documents\\Backend\\Backend\\Backend.csproj": {}
+    "C:\\Users\\USER\\Desktop\\Projeto\\IPB-Kanban\\Backend\\Backend\\Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aline\\Documents\\Backend\\Backend\\Backend.csproj": {
+    "C:\\Users\\USER\\Desktop\\Projeto\\IPB-Kanban\\Backend\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aline\\Documents\\Backend\\Backend\\Backend.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Desktop\\Projeto\\IPB-Kanban\\Backend\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "C:\\Users\\aline\\Documents\\Backend\\Backend\\Backend.csproj",
-        "packagesPath": "C:\\Users\\aline\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aline\\Documents\\Backend\\Backend\\obj\\",
+        "projectPath": "C:\\Users\\USER\\Desktop\\Projeto\\IPB-Kanban\\Backend\\Backend\\Backend.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USER\\Desktop\\Projeto\\IPB-Kanban\\Backend\\Backend\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\aline\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -41,6 +38,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.AspNetCore.Mvc.Formatters.Xml": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -67,9 +72,17 @@
               "target": "Package",
               "version": "[3.1.5, )"
             },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.6.0, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.6.0, )"
             }
           },
           "imports": [
@@ -90,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
