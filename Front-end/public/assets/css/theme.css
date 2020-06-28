@@ -2618,7 +2618,7 @@ input[type="button"].btn-block {
   z-index: -1;
   opacity: 0; }
   .custom-control-input:checked ~ .custom-control-label::before {
-    color: #fff;
+    color: rgb(58, 56, 56);
     border-color:#393B39;
     background-color: #d7e868; }
   .custom-control-input:focus ~ .custom-control-label::before {
@@ -3283,9 +3283,9 @@ input[type="button"].btn-block {
     border-bottom-left-radius: 0.5rem; }
 
 .card-body {
-  color: #D7E868;
+  color: #000000;
   background-color: #393B39;
-  border: 1px, solid, #61B8A2;
+  border: 1px, solid, #222222;
   flex: 1 1 auto;
   padding: 1.5rem; }
 
@@ -9980,7 +9980,7 @@ label.valid {
     .socials li a i {
       width: 30px;
       height: 30px;
-      color: #fff;
+      color: rgb(175, 175, 175);
       font-size: 14px;
       border-radius: 5px;
       -moz-border-radius: 5px;
