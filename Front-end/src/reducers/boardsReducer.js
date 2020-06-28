@@ -49,13 +49,6 @@ const boardsReducer = (state = initialState, action) => {
       return { ...state, [boardID]: board };
     }
 
-    case CONSTANTS.DELETE_BOARD: {
-      const { boardID } = action.payload;
-      const board = state[boardID];
-      const lists = board.lists;
-      return { ...state, [boardID]: board };
-    }
-
     case CONSTANTS.ADD_BOARD: {
       const { title, id } = action.payload;
       const newID = `board-${id}`;

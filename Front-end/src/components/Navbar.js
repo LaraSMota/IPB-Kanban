@@ -67,29 +67,9 @@ export default function Navbar () {
                     color: "#61B8A2"
                   }}
                 >
-                  <button
-                    className="btn btn-primary btn-block dropdown-toggle"
-                    type="button"
-                    id="newContentButton"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    style={{
-                      backgroundColor: "#393B39",
-                      color: "#61B8A2"
-                    }}
-                  >
-                    Add New
-                  </button>
                   <div className="dropdown-menu">
                     <a className="dropdown-item" href="create-board">
                       Board
-                    </a>
-                    <a
-				  className="dropdown-item"
-				   href="team"
-                    >
-                      Team
                     </a>
                   </div>
                 </div>

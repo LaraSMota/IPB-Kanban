@@ -97,22 +97,6 @@ class AccountSettingsForm extends Component {
 						  Your Profile
 						</a>
 					  </li>
-					  <li className="nav-item">
-						<a
-						  className="nav-link"
-						  id="notifications-tab"
-						  data-toggle="tab"
-						  href="#notifications"
-						  role="tab"
-						  aria-controls="notifications"
-						  aria-selected="false"
-						  style={{
-							color: "#61B8A2"
-						  }}
-						>
-						  Notifications
-						</a>
-					  </li>
 					</ul>
 				  </div>
 				  <div className="col-xl-8 col-lg-9">

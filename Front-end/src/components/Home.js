@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { addBoard, deleteBoard } from "../actions";
+import { addBoard } from "../actions";
 import BoardThumbnail from "./BoardThumbnail";
 import Navbar from './Navbar';
-import Icon from "@material-ui/core/Icon";
+
 
 
 const Thumbnails = styled.div`
@@ -25,14 +25,6 @@ const HomeContainer = styled.div`
   box-sizing: border-box;
 `;
 
-const DeleteButton = styled(Icon)`
-  cursor: pointer;
-  transition: opacity 0.3s ease-in-out;
-  opacity: 0.8;
-  &:hover {
-    opacity: 1;
-  }
-`;
 
 const CreateInput = styled.input`
   width: 400px;
@@ -59,10 +51,6 @@ const Home = ({ boards, boardOrder, dispatch, boardID }) => {
   const handleSubmit = e => {
     e.preventDefault();
     dispatch(addBoard(newBoardTitle));
-  };
-
-  const handleDeleteBoard = () => {
-    dispatch(deleteBoard(boardID));
   };
 
 
@@ -161,9 +149,6 @@ const Home = ({ boards, boardOrder, dispatch, boardID }) => {
                     
                         
                   <HomeContainer>
-                  <DeleteButton onClick={handleDeleteBoard}>
-                        delete
-                      </DeleteButton>
                   <Thumbnails>{renderBoards()}</Thumbnails>
                   
   
